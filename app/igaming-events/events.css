@@ -1,0 +1,38 @@
+.events-hero {
+  padding: calc(var(--nav-height) + 70px) 24px 70px;
+  background: linear-gradient(rgba(5,10,40,0.82) 0%, rgba(5,10,40,0.88) 100%),
+    url('https://images.unsplash.com/photo-1540575467063-178a50c2df87?ixlib=rb-4.0.3&auto=format&fit=crop&w=2000&q=60') center/cover;
+  text-align: center;
+}
+.events-hero h1 { font-size: 3rem; font-weight: 900; color: #fff; margin-bottom: 16px; }
+.events-hero h1 span { color: #4db8ff; }
+.events-hero p { font-size: 1.05rem; color: rgba(255,255,255,0.75); max-width: 540px; margin: 0 auto; }
+
+.events-body { padding: 80px 0; background: var(--bg-lighter); }
+.events-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 26px; }
+.event-card {
+  background: #fff; border-radius: 18px; border: 1px solid var(--border-card);
+  overflow: hidden; box-shadow: var(--shadow-sm); transition: all 0.3s;
+}
+.event-card:hover { transform: translateY(-5px); box-shadow: var(--shadow-md); }
+.event-card-header {
+  padding: 28px 28px 22px;
+  background: linear-gradient(135deg, #0468e5, #2d8fff);
+  color: #fff;
+}
+.event-date { font-size: 0.8rem; font-weight: 700; opacity: 0.85; margin-bottom: 8px; text-transform: uppercase; letter-spacing: 0.08em; }
+.event-card-header h3 { font-size: 1.3rem; font-weight: 800; margin-bottom: 4px; }
+.event-card-header .event-location { font-size: 0.88rem; opacity: 0.85; }
+.event-card-body { padding: 24px 28px 28px; }
+.event-card-body p { font-size: 0.9rem; color: var(--text-body); line-height: 1.7; margin-bottom: 20px; }
+.event-tags { display: flex; flex-wrap: wrap; gap: 8px; margin-bottom: 20px; }
+.event-tag { padding: 4px 12px; background: rgba(4,104,229,0.08); color: var(--blue); border-radius: 20px; font-size: 0.75rem; font-weight: 600; }
+.event-link { display: inline-flex; align-items: center; gap: 6px; color: var(--blue); font-weight: 700; font-size: 0.875rem; }
+.event-link:hover { gap: 10px; color: var(--blue-dark); }
+
+.events-cta { margin-top: 60px; text-align: center; background: linear-gradient(135deg, #dce8ff, #e8f4ff); border-radius: 20px; padding: 60px 40px; border: 1px solid var(--border-card); }
+.events-cta h2 { font-size: 2rem; font-weight: 900; color: var(--blue); margin-bottom: 14px; }
+.events-cta p { font-size: 1rem; color: var(--text-body); max-width: 520px; margin: 0 auto 28px; }
+
+@media (max-width: 1024px) { .events-grid { grid-template-columns: 1fr 1fr; } }
+@media (max-width: 768px) { .events-grid { grid-template-columns: 1fr; } .events-hero h1 { font-size: 2rem; } }

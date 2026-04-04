@@ -1,0 +1,91 @@
+/* Dark theme for iGaming dev page */
+.igdev-hero {
+  min-height: 100vh;
+  background: linear-gradient(180deg, #060e2b 0%, #09173f 60%, #060e2b 100%);
+  padding-top: var(--nav-height);
+  display: flex; align-items: center; justify-content: center;
+  text-align: center; position: relative; overflow: hidden;
+}
+.igdev-hero::before {
+  content: '';
+  position: absolute; inset: 0;
+  background: radial-gradient(ellipse 60% 55% at 50% 20%, rgba(0,120,255,0.22) 0%, transparent 65%);
+}
+.igdev-hero-inner { position: relative; z-index: 2; padding: 80px 24px; }
+.igdev-hero h1 {
+  font-size: 3.8rem; font-weight: 900; color: #fff;
+  line-height: 1.1; margin-bottom: 22px; letter-spacing: -0.03em;
+}
+.igdev-hero h1 span { color: #00b4d8; }
+.igdev-hero p { font-size: 1.15rem; color: rgba(255,255,255,0.75); max-width: 620px; margin: 0 auto 40px; line-height: 1.7; }
+.igdev-hero-btns { display: flex; gap: 16px; justify-content: center; flex-wrap: wrap; }
+.down-arrow {
+  margin: 50px auto 0; width: 44px; height: 44px; border-radius: 50%;
+  background: rgba(255,255,255,0.1); border: 1px solid rgba(255,255,255,0.2);
+  display: flex; align-items: center; justify-content: center;
+  color: #fff; font-size: 1.2rem; animation: bounce 2s infinite;
+}
+@keyframes bounce { 0%,100%{transform:translateY(0)} 50%{transform:translateY(8px)} }
+
+/* Services grid (dark) */
+.igdev-services { padding: 100px 0; background: #060e2b; }
+.igdev-services-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 24px; }
+.igdev-svc-card {
+  background: rgba(255,255,255,0.04); border: 1px solid rgba(255,255,255,0.08);
+  border-radius: 20px; padding: 36px 30px; transition: all 0.3s;
+}
+.igdev-svc-card:hover {
+  background: rgba(4,104,229,0.1); border-color: rgba(4,104,229,0.3);
+  transform: translateY(-4px);
+}
+.igdev-svc-card-icon { font-size: 2.8rem; margin-bottom: 20px; }
+.igdev-svc-card h3 { font-size: 1.2rem; font-weight: 800; color: #fff; margin-bottom: 12px; }
+.igdev-svc-card p { font-size: 0.9rem; color: rgba(255,255,255,0.65); line-height: 1.7; margin-bottom: 20px; }
+.igdev-svc-link { color: #4db8ff; font-size: 0.85rem; font-weight: 700; text-transform: uppercase; letter-spacing: 0.05em; }
+.igdev-svc-link:hover { color: #00b4d8; }
+
+/* Features (dark) */
+.igdev-features { padding: 100px 0; background: #09173f; }
+.igdev-features-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 60px; align-items: center; }
+.igdev-features-text h2 { font-size: 2.6rem; font-weight: 900; color: #fff; margin-bottom: 22px; }
+.igdev-features-text h2 span { color: #00b4d8; }
+.igdev-features-text p { font-size: 1rem; color: rgba(255,255,255,0.7); line-height: 1.75; margin-bottom: 16px; }
+.igdev-feature-list { list-style: none; display: flex; flex-direction: column; gap: 12px; margin-top: 24px; }
+.igdev-feature-list li {
+  display: flex; align-items: center; gap: 14px;
+  color: rgba(255,255,255,0.85); font-size: 0.95rem; font-weight: 600;
+}
+.igdev-feature-list li::before { content: '✓'; color: #00b4d8; font-weight: 900; font-size: 1rem; }
+.igdev-features-visual {
+  background: rgba(4,104,229,0.08); border-radius: 24px;
+  border: 1px solid rgba(4,104,229,0.2); padding: 50px;
+  display: grid; grid-template-columns: 1fr 1fr; gap: 16px;
+}
+.igdev-fv-box {
+  background: rgba(255,255,255,0.05); border-radius: 14px;
+  border: 1px solid rgba(255,255,255,0.08);
+  padding: 22px; text-align: center;
+}
+.igdev-fv-box .num { font-size: 2rem; font-weight: 900; color: #4db8ff; }
+.igdev-fv-box .lbl { font-size: 0.78rem; color: rgba(255,255,255,0.6); margin-top: 4px; }
+
+/* CTA (dark) */
+.igdev-cta {
+  padding: 100px 0;
+  background: linear-gradient(135deg, #060e2b 0%, #0a5cf5 100%);
+  text-align: center;
+}
+.igdev-cta h2 { font-size: 3rem; font-weight: 900; color: #fff; margin-bottom: 20px; }
+.igdev-cta p { font-size: 1.1rem; color: rgba(255,255,255,0.8); max-width: 550px; margin: 0 auto 36px; }
+
+@media (max-width: 1024px) {
+  .igdev-hero h1 { font-size: 2.6rem; }
+  .igdev-services-grid { grid-template-columns: 1fr 1fr; }
+  .igdev-features-grid { grid-template-columns: 1fr; }
+}
+@media (max-width: 768px) {
+  .igdev-hero h1 { font-size: 2rem; }
+  .igdev-services-grid { grid-template-columns: 1fr; }
+  .igdev-features-visual { grid-template-columns: 1fr 1fr; }
+  .igdev-cta h2 { font-size: 2rem; }
+}
