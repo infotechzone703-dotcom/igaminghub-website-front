@@ -1,5 +1,6 @@
 import MarketingNav from './components/MarketingNav';
 import MarketingFooter from './components/MarketingFooter';
+import WhatsAppButton from './components/WhatsAppButton';
 import '../public/css/style.css';
 import '../public/css/marketing.css';
 
@@ -20,6 +21,7 @@ export default function RootLayout({ children }) {
         <MarketingNav />
         {children}
         <MarketingFooter />
+        <WhatsAppButton />
       </body>
     </html>
   );
